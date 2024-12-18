@@ -12,6 +12,7 @@ import {
   FormItem,
   FormMessage,
 } from "@/components/ui/form";
+import { redirect } from "next/navigation";
 
 const formSchema = z.object({
   password: z
@@ -36,6 +37,7 @@ export const SecretPasswordForm = () => {
     const password = values.password;
     if (password.toLowerCase() === "crew") {
       console.log("ACERTOU");
+      redirect("/gift-page");
     }
     console.log(values);
   }
