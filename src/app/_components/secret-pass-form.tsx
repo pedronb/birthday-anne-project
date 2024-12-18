@@ -35,11 +35,9 @@ export const SecretPasswordForm = () => {
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     const password = values.password;
-    if (password.toLowerCase() === "crew") {
-      console.log("ACERTOU");
+    if (password.toLowerCase() === "33anosdealegria") {
       redirect("/gift-page");
     }
-    console.log(values);
   }
 
   return (
